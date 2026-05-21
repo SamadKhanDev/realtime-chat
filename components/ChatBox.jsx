@@ -1,5 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useContext } from "react";
 import Message from "./Message";
+import { LanguageContext } from "../lib/LanguageContext";
+
+
 
 export default function ChatBox({
   selectedUser,
@@ -17,6 +20,7 @@ export default function ChatBox({
   const scrollRef = useRef(null);
   const fileInputRef = useRef(null);
   const [uploading, setUploading] = useState(false);
+  const { language, setLanguage } = useContext(LanguageContext);
 
   // Auto scroll to bottom
   useEffect(() => {
@@ -208,7 +212,20 @@ export default function ChatBox({
       </div>
 
       {/* Footer Text/Attachment Input Bar */}
-      <div className="p-4 bg-neutral-900/30 border-t border-white/10 shrink-0 flex items-center gap-3">
+      <div className="flex items-center gap-2 text-xs text-neutral-400">
+  <span>Lang:</span>
+
+  <select
+    value={language}
+    onChange={(e) => setLanguage(e.target.value)}
+    className="bg-neutral-950 border border-white/10 rounded-lg px-2 py-1 text-white"
+  >
+    <option value="en">English</option>
+    <option value="ur">Urdu</option>
+    <option value="hi">Hindi</option>
+    <option value="es">Spanish</option>
+    <option value="fr">French</option>
+  </select>
         
         {/* Hidden File Input for Attachments */}
         <input

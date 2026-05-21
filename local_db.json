@@ -23,6 +23,15 @@
       "_id": "oc1xcsdimhi",
       "createdAt": "2026-05-18T14:47:45.236Z",
       "updatedAt": "2026-05-18T14:47:45.237Z"
+    },
+    {
+      "name": "khan@123.com",
+      "email": "khan@example.com",
+      "password": "$2b$10$RGxDjGGmCXsPfO8Mqe9Ige9mrtKjs11DlkjQkSqQpCPh7lG74MMt.",
+      "avatar": "https://ui-avatars.com/api/?name=khan%40123.com&background=6366F1&color=fff&size=128",
+      "_id": "jgqisu7apg",
+      "createdAt": "2026-05-21T17:22:42.346Z",
+      "updatedAt": "2026-05-21T17:22:42.346Z"
     }
   ],
   "messages": [
@@ -1133,6 +1142,246 @@
       "_id": "2ecjdipwewr",
       "createdAt": "2026-05-21T17:07:19.304Z",
       "updatedAt": "2026-05-21T17:07:19.304Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "Hellow",
+      "seen": false,
+      "_id": "l9px94cabd",
+      "createdAt": "2026-05-21T19:20:57.109Z",
+      "updatedAt": "2026-05-21T19:20:57.109Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "Hi",
+      "seen": false,
+      "_id": "3advspzgfh5",
+      "createdAt": "2026-05-21T19:21:03.893Z",
+      "updatedAt": "2026-05-21T19:21:03.893Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": ",lldfd",
+      "seen": false,
+      "_id": "erqku7irs2w",
+      "createdAt": "2026-05-21T19:21:23.700Z",
+      "updatedAt": "2026-05-21T19:21:23.700Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "vcl,lvd",
+      "seen": false,
+      "_id": "5vk9ps611te",
+      "createdAt": "2026-05-21T19:22:25.258Z",
+      "updatedAt": "2026-05-21T19:22:25.258Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "sdsdsd",
+      "seen": false,
+      "_id": "zxvneqs2ln",
+      "createdAt": "2026-05-21T19:23:30.944Z",
+      "updatedAt": "2026-05-21T19:23:30.944Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "Hi",
+      "seen": false,
+      "_id": "bdvkoe9vqx",
+      "createdAt": "2026-05-21T19:23:36.362Z",
+      "updatedAt": "2026-05-21T19:23:36.362Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "oc1xcsdimhi",
+      "groupId": null,
+      "text": "hi",
+      "seen": false,
+      "_id": "xcnqw1j39vh",
+      "createdAt": "2026-05-21T19:24:41.718Z",
+      "updatedAt": "2026-05-21T19:24:41.718Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "oc1xcsdimhi",
+      "groupId": null,
+      "text": "Helllow",
+      "seen": false,
+      "_id": "w5akx36tpmn",
+      "createdAt": "2026-05-21T19:24:48.729Z",
+      "updatedAt": "2026-05-21T19:24:48.729Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "Hellow",
+      "seen": false,
+      "_id": "2bpre0c1obh",
+      "createdAt": "2026-05-21T19:27:12.154Z",
+      "updatedAt": "2026-05-21T19:27:12.154Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "Hellow",
+      "seen": false,
+      "_id": "qbhnmvqj7g",
+      "createdAt": "2026-05-21T19:28:28.690Z",
+      "updatedAt": "2026-05-21T19:28:28.690Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "Hellow",
+      "seen": false,
+      "_id": "kxb5e82rq1p",
+      "createdAt": "2026-05-21T19:46:19.474Z",
+      "updatedAt": "2026-05-21T19:46:19.474Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "Hi",
+      "seen": false,
+      "_id": "m7ib95kup7",
+      "createdAt": "2026-05-21T19:46:23.837Z",
+      "updatedAt": "2026-05-21T19:46:23.837Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "hi",
+      "seen": false,
+      "_id": "yfnbtrytx3r",
+      "createdAt": "2026-05-21T19:46:40.334Z",
+      "updatedAt": "2026-05-21T19:46:40.334Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "Hellow",
+      "seen": false,
+      "_id": "q79vry2e6a",
+      "createdAt": "2026-05-21T19:46:43.230Z",
+      "updatedAt": "2026-05-21T19:46:43.230Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "Hellow",
+      "seen": false,
+      "_id": "fizbp3y14qm",
+      "createdAt": "2026-05-21T19:49:20.320Z",
+      "updatedAt": "2026-05-21T19:49:20.320Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "Hellow",
+      "seen": false,
+      "_id": "tgfe66n59rd",
+      "createdAt": "2026-05-21T19:49:25.030Z",
+      "updatedAt": "2026-05-21T19:49:25.030Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "Hi",
+      "seen": false,
+      "_id": "kcqwpgcvp0d",
+      "createdAt": "2026-05-21T19:49:30.456Z",
+      "updatedAt": "2026-05-21T19:49:30.456Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "How are you?",
+      "seen": false,
+      "_id": "gfq46d2155w",
+      "createdAt": "2026-05-21T19:49:37.487Z",
+      "updatedAt": "2026-05-21T19:49:37.487Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "Hi",
+      "seen": false,
+      "_id": "k9i2mhke14",
+      "createdAt": "2026-05-21T19:50:06.961Z",
+      "updatedAt": "2026-05-21T19:50:06.961Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "HI",
+      "seen": false,
+      "_id": "iincxunaqo9",
+      "createdAt": "2026-05-21T19:51:18.267Z",
+      "updatedAt": "2026-05-21T19:51:18.267Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "Helow",
+      "seen": false,
+      "_id": "q1o3y9ci0o",
+      "createdAt": "2026-05-21T19:51:22.830Z",
+      "updatedAt": "2026-05-21T19:51:22.830Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "How are u",
+      "seen": false,
+      "_id": "yneaikfujeq",
+      "createdAt": "2026-05-21T19:52:06.065Z",
+      "updatedAt": "2026-05-21T19:52:06.065Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "Hellow",
+      "seen": false,
+      "_id": "v2puz75e598",
+      "createdAt": "2026-05-21T19:52:17.839Z",
+      "updatedAt": "2026-05-21T19:52:17.839Z"
+    },
+    {
+      "sender": "vkma58xbfka",
+      "receiver": "0nrv5xsfzao",
+      "groupId": null,
+      "text": "Hi",
+      "seen": false,
+      "_id": "gtfgugymb4u",
+      "createdAt": "2026-05-21T19:52:25.032Z",
+      "updatedAt": "2026-05-21T19:52:25.032Z"
     }
   ],
   "groups": [

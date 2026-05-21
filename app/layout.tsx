@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import LanguageProviderWrapper from "./LanguageProviderWrapper";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "RealChat",
   description: "A real-time chat application",
 };
@@ -27,7 +27,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <LanguageProviderWrapper>{children}</LanguageProviderWrapper>
+      </body>
     </html>
   );
 }
