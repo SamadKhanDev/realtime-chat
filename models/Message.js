@@ -10,6 +10,10 @@ const messageSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
     },
+    groupId: {
+      type: String,
+      default: null,
+    },
     text: String,
     image: String,
     file: String,

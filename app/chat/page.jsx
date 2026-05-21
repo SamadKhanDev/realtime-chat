@@ -17,6 +17,7 @@ export default function ChatDashboard() {
 
   // Connection, Notification, and Group states
   const [connectionStatus, setConnectionStatus] = useState("connected");
+  const [hasConnected, setHasConnected] = useState(false);
   const [notifications, setNotifications] = useState([]);
   const [groups, setGroups] = useState([]);
   const [selectedGroup, setSelectedGroup] = useState(null);
@@ -81,13 +82,17 @@ export default function ChatDashboard() {
     authenticate();
   }, [router]);
 
-  // 2. Track connection status
+  // 2. Track connection status (only after user is authenticated and socket is initialized)
   useEffect(() => {
+    if (!currentUser) return;
     const unsubscribe = socket.onStatusChange((status) => {
       setConnectionStatus(status);
+      if (status === "connected") {
+        setHasConnected(true);
+      }
     });
     return () => unsubscribe();
-  }, []);
+  }, [currentUser]);
 
   // 3. Listen to offline message background re-send success events
   useEffect(() => {
@@ -602,7 +607,7 @@ export default function ChatDashboard() {
       />
 
       {/* Premium Connection Status Banner */}
-      {connectionStatus !== "connected" && (
+      {(!hasConnected && connectionStatus !== "connected") && (
         <div
           className={`w-full py-2 px-6 flex items-center justify-center gap-3 transition-all duration-300 z-30 border-b backdrop-blur-md ${connectionStatus === "offline"
               ? "bg-amber-500/10 border-amber-500/20 text-amber-300 shadow-md shadow-amber-500/5 animate-pulse"

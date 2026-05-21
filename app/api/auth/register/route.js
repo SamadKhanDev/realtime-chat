@@ -6,7 +6,7 @@ export async function POST(req) {
   try {
     await connectDB();
 
-    const { name, email, password } = await req.json();
+    const { name, email, password, avatar } = await req.json();
 
     const existingUser = await User.findOne({ email });
 
@@ -20,6 +20,7 @@ export async function POST(req) {
       name,
       email,
       password: hashedPassword,
+      avatar,
     });
 
     return NextResponse.json({
