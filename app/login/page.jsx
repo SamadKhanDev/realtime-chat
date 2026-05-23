@@ -114,7 +114,7 @@ export default function Login() {
 
         {/* Card Footer */}
         <div className="text-center text-sm text-neutral-400 pt-2 border-t border-white/5">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <Link href="/register" className="font-semibold text-indigo-400 hover:text-indigo-300 transition duration-200">
             Sign Up
           </Link>

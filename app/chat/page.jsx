@@ -38,6 +38,31 @@ export default function ChatDashboard() {
 
   const router = useRouter();
 
+  // Helpers to fetch sidebar entities
+  const fetchUsersList = async () => {
+    try {
+      const res = await fetch("/api/users");
+      const data = await res.json();
+      if (data.success) {
+        setUsers(data.users);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const fetchGroupsList = async () => {
+    try {
+      const res = await fetch("/api/groups");
+      const data = await res.json();
+      if (data.success) {
+        setGroups(data.groups);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   // 1. Authenticate user and fetch users & groups on mount
   useEffect(() => {
     const authenticate = async () => {
@@ -134,9 +159,6 @@ export default function ChatDashboard() {
         recipientId: selectedUser._id
       });
 
-      // Clear notifications for the selected user
-      setNotifications((prev) => prev.filter((n) => n.sender !== selectedUser._id));
-
       prevSelectedUserRef.current = selectedUser;
     } else if (prevSelectedUserRef.current) {
       // Leave conversation room when deselected
@@ -160,9 +182,6 @@ export default function ChatDashboard() {
 
       // Join new group room
       socket.emitMessage("join-group", { groupId: selectedGroup._id });
-
-      // Clear notifications for the selected group
-      setNotifications((prev) => prev.filter((n) => n.groupId !== selectedGroup._id));
 
       prevSelectedGroupRef.current = selectedGroup;
     } else if (prevSelectedGroupRef.current) {
@@ -278,30 +297,7 @@ export default function ChatDashboard() {
     };
   }, [currentUser, selectedUser, selectedGroup]);
 
-  // Helpers to fetch sidebar entities
-  const fetchUsersList = async () => {
-    try {
-      const res = await fetch("/api/users");
-      const data = await res.json();
-      if (data.success) {
-        setUsers(data.users);
-      }
-    } catch (err) {
-      console.error(err);
-    }
-  };
 
-  const fetchGroupsList = async () => {
-    try {
-      const res = await fetch("/api/groups");
-      const data = await res.json();
-      if (data.success) {
-        setGroups(data.groups);
-      }
-    } catch (err) {
-      console.error(err);
-    }
-  };
 
   // 7. Fetch messages when selected user changes (Direct Chat)
   useEffect(() => {
@@ -321,7 +317,6 @@ export default function ChatDashboard() {
     };
 
     fetchMessages();
-    setRecipientTyping(false);
   }, [selectedUser]);
 
   // 8. Fetch messages when selected group changes (Group Chat)
@@ -342,7 +337,6 @@ export default function ChatDashboard() {
     };
 
     fetchGroupMessages();
-    setRecipientTyping(false);
   }, [selectedGroup]);
 
   // 9. Send Message Handler with Offline Resilience & Acknowledgement
@@ -528,11 +522,19 @@ export default function ChatDashboard() {
   const handleSelectUser = (user) => {
     setSelectedUser(user);
     setSelectedGroup(null);
+    setRecipientTyping(false);
+    if (user) {
+      setNotifications((prev) => prev.filter((n) => n.sender !== user._id));
+    }
   };
 
   const handleSelectGroup = (group) => {
     setSelectedGroup(group);
     setSelectedUser(null);
+    setRecipientTyping(false);
+    if (group) {
+      setNotifications((prev) => prev.filter((n) => n.groupId !== group._id));
+    }
   };
 
   // 13. Logout Handler

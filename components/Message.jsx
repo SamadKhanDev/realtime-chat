@@ -3,24 +3,10 @@ import { translateText } from "../utils/translate";
 import { LanguageContext } from "../lib/LanguageContext";
 
 export default function Message({ message, isMe = false, isGroupChat, users = [] }) {
-  const [formattedTime, setFormattedTime] = useState("");
   const [translatedText, setTranslatedText] = useState(message.text);
 
   // ✅ Correct: hooks at top level
   const { language } = useContext(LanguageContext);
-
-  // Format time
-  useEffect(() => {
-    if (message.createdAt) {
-      const date = new Date(message.createdAt);
-      setFormattedTime(
-        date.toLocaleTimeString([], {
-          hour: "2-digit",
-          minute: "2-digit",
-        })
-      );
-    }
-  }, [message.createdAt]);
 
   // Translation effect - only for messages sent by current user
   useEffect(() => {
@@ -82,6 +68,13 @@ export default function Message({ message, isMe = false, isGroupChat, users = []
     const index = Math.abs(hash) % colors.length;
     return colors[index];
   };
+
+  const formattedTime = message.createdAt
+    ? new Date(message.createdAt).toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      })
+    : "";
 
   const senderName = getSenderName();
 
